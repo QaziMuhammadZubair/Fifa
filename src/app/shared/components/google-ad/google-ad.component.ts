@@ -8,8 +8,8 @@ export type AdFormat = 'banner' | 'rectangle' | 'leaderboard' | 'sidebar' | 'inf
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="ad-wrapper" [class]="'ad-' + format" [class.ad-mock]="!publisherId || publisherId === 'ca-pub-XXXXXXXXXXXXXXXX'">
-      @if (!publisherId || publisherId === 'ca-pub-XXXXXXXXXXXXXXXX') {
+    <div class="ad-wrapper" [class]="'ad-' + format" [class.ad-mock]="!publisherId || publisherId === 'ca-pub-8176827261099189'">
+      @if (!publisherId || publisherId === 'ca-pub-8176827261099189') {
         <!-- Mock Ad Placeholder -->
         <div class="ad-mock-inner">
           <div class="ad-mock-label">Advertisement</div>
@@ -139,11 +139,11 @@ export type AdFormat = 'banner' | 'rectangle' | 'leaderboard' | 'sidebar' | 'inf
 })
 export class GoogleAdComponent implements AfterViewInit {
   @Input() format: AdFormat = 'banner';
-  @Input() publisherId: string = 'ca-pub-XXXXXXXXXXXXXXXX';
-  @Input() adSlot: string = '1234567890';
+  @Input() publisherId: string = 'ca-pub-8176827261099189';
+  @Input() adSlot: string = '2759618179';
 
   ngAfterViewInit() {
-    if (this.publisherId && this.publisherId !== 'ca-pub-XXXXXXXXXXXXXXXX') {
+    if (this.publisherId && this.publisherId !== 'ca-pub-8176827261099189') {
       try {
         ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
       } catch (e) {
